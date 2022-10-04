@@ -1,6 +1,7 @@
 apiKey <- Sys.getenv("API_KEY")
 connectServer <- Sys.getenv("CONNECT_SERVER")
 
+print("Fetching data...")
 
 # get general content
 df_gc <- getData(
@@ -32,7 +33,7 @@ df_usage <- unique(df_gc$guid) %>%
         endpoint = paste0("__api__/v1/instrumentation/shiny/usage?content_guid=",guid,"&asc_order=false&from=2022-01-01T18:00:00Z&limit=500"),
         dataframe = F
       )
-    print(length(usage_list$results))
+    #print(length(usage_list$results))
     
     if(length(usage_list$results) > 0) {
       df <- listToDf(usage_list$results)
@@ -92,7 +93,7 @@ current_usage_tot <-
   current_usage[
     ,.(tot_users = uniqueN(user_guid),
        tot_visits = .N,
-       tot_sess_time = sum(sess_time)
+       tot_sess_time = sum(sess_time, na.rm = T)
     )
     ,.(
       year_month
@@ -117,14 +118,14 @@ setorder(current_usage_agg, app, year_month)
 # value box stats app 
 vb_metrics <- current_usage[,
                     .(num_users= uniqueN(user_guid),
-                      mean_time = round(mean(sess_time_adj),1),
-                      sum_time_hr = round(sum(sess_time_adj)/60,1)
+                      mean_time = round(mean(sess_time_adj, na.rm = T),1),
+                      sum_time_hr = round(sum(sess_time_adj, na.rm = T)/60,1)
                         )
                     ,.(app = title)]
 setDT(vb_metrics)
 
 
-
+print("data fetch complete!")
 
 
 

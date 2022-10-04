@@ -51,7 +51,8 @@ ui <- dashboardPage(
                     ),
                     fluidRow(
                       box(uiOutput("application_choices"),width = 6),
-                      box(textOutput("application_choice_note"), width = 6)
+                      box(textOutput("application_choice_note"), width = 3),
+                      actionButton("refresh", "Refresh Data")
                     ),
                     fluidRow(
                         box(plotlyOutput("visits", height = 250)),
@@ -131,8 +132,8 @@ server <- function(input, output) {
     
     # value boxes server wide
     sum_users <- length(unique(current_usage$user_guid))
-    mean_time <- round(mean(current_usage$sess_time_adj),1)
-    sum_time <- round(sum(current_usage$sess_time_adj),1)
+    mean_time <- round(mean(current_usage$sess_time_adj, na.rm = T),1)
+    sum_time <- round(sum(current_usage$sess_time_adj, na.rm = T),1)
     
     # value boxes app wide
     #print(input$application)
@@ -484,6 +485,11 @@ server <- function(input, output) {
     
     output$current_usage_agg_table = DT::renderDataTable({
       DT::datatable(current_usage_agg_f)
+    })
+    
+    # refresh data ----
+    observeEvent(input$refresh, {
+      source("data.R")
     })
     
 
