@@ -100,7 +100,7 @@ ui <- dashboardPage(
 server <- function(input, output) {
   
   output$application_choice_note <- renderText({
-    "*The graphs below will change according to the application choice drop down."
+    "*The graphs below will change according to the application choice drop down. Press refresh to see latest data."
   })
     
     # metric choices
@@ -125,29 +125,37 @@ server <- function(input, output) {
     
     # data ----
     
+    # data sets pulled from data.R
+    datasets <- reactiveValues(
+      current_usage = current_usage,
+      current_usage_agg = current_usage_agg,
+      current_usage_tot = current_usage_tot,
+      current_usage_agg_f = current_usage_agg_f,
+      vb_metrics_app = vb_metrics_app,
+      vb_metrics = vb_metrics
+    )
+
     # data frames
-    current_usage_agg_reactive <- eventReactive(input$application, {
-        df <- current_usage_agg_f[app == input$application]
+    current_usage_agg_reactive <- reactive({
+      datasets$current_usage_agg_f[datasets$current_usage_agg_f$app == input$application,]
+    })
+    
+    # value boxes app wide
+    vb_metrics_reactive_app <- reactive({
+      datasets$vb_metrics_app[datasets$vb_metrics_app$app == input$application,]
     })
     
     # value boxes server wide
-    sum_users <- length(unique(current_usage$user_guid))
-    mean_time <- round(mean(current_usage$sess_time_adj, na.rm = T),1)
-    sum_time <- round(sum(current_usage$sess_time_adj, na.rm = T),1)
-    
-    # value boxes app wide
-    #print(input$application)
-    
-    vb_metrics_reactive <- eventReactive(input$application, {
-      vb_metrics[app == input$application,]
+    vb_metrics_reactive <- reactive({
+      datasets$vb_metrics
     })
     
     # TAB 1 ----
     
     ## graph list ----
     
-    graphs <- eventReactive(input$application, {
-        
+    graphs <- reactive({
+        req(current_usage_agg_reactive())
         df <- as.data.frame(current_usage_agg_reactive())
         graphs <- c("num_visits", "num_users", "mean_sess_time", "sum_sess_time")
         
@@ -165,41 +173,41 @@ server <- function(input, output) {
     ## visits ----
     
     output$visits <- renderPlotly({
-        
-        graphs()[[1]] %>%
-            layout(title = "Number of Visits", 
-                   xaxis = list(           
-                       title = "Month",    
-                       showgrid = F,
-                       tickangle = 90
-                   ),
-                   yaxis = list(           
-                       title = "Visits"      
-                   ))
+      
+      graphs()[[1]] %>%
+        layout(title = "Number of Visits", 
+               xaxis = list(           
+                 title = "Month",    
+                 showgrid = F,
+                 tickangle = 90
+               ),
+               yaxis = list(           
+                 title = "Visits"      
+               ))
         
     })
     
     # users ----
     
     output$users <- renderPlotly({
-        
-        graphs()[[2]] %>%
-                layout(title = "Number of Users",
-                       xaxis = list(
-                           title = "Month",
-                           showgrid = F,
-                           tickangle = 90
-                       ),
-                       yaxis = list(
-                           title = "Users"
-                       ))
-        
+
+      graphs()[[2]] %>%
+        layout(title = "Number of Users",
+               xaxis = list(
+                 title = "Month",
+                 showgrid = F,
+                 tickangle = 90
+               ),
+               yaxis = list(
+                 title = "Users"
+               ))
+      
     })
     
     # sessions avg time ----
     
     output$sessions_avg_time <- renderPlotly({
-        
+
         graphs()[[3]] %>%
             layout(title = "Average User Session Time", 
                    xaxis = list(           
@@ -215,7 +223,7 @@ server <- function(input, output) {
     
     # sessions total time ----
     output$sessions_tot_time <- renderPlotly({
-        
+
         graphs()[[4]] %>%
             layout(title = "Total Session Time", 
                    xaxis = list(           
@@ -229,43 +237,12 @@ server <- function(input, output) {
             
     })
     
-    
-    #custom tool----
-    
-    # output$master <- renderPlotly ({
-    #   
-    #   # axis_schema <- data.frame(
-    #   #   metric = c(
-    #   #     "year_month", "num_users", "num_visits", "mean_sess_time",  "sum_sess_time",  "tot_users", "tot_visits",     
-    #   #     "tot_sess_time", "perc_num_users",  "perc_num_visits", "perc_sess_time" 
-    #   #   ),
-    #   #   axis_name= c(
-    #   #     "Month", "Users", "Visits", ""
-    #   #   )
-    #   # )
-    #     
-    #     df <- as.data.frame(current_usage_agg_reactive())
-    #     
-    #     plot_ly(df, 
-    #             x = ~year_month
-    #             ,y = df[,input$metric]
-    #             ,type = 'bar') %>%
-    #         layout(title = "Monthly Trends Over Time", 
-    #                xaxis = list(           
-    #                    title = "Month",    
-    #                    showgrid = F,
-    #                    tickangle = 90
-    #                ),
-    #                yaxis = list(           
-    #                    title = input$metric      
-    #                ))
-    #     
-    # })
-    
     # value boxes app bases ----
     output$sumUsersApp = renderValueBox({
+
+      df <- vb_metrics_reactive_app()
       recent_date = Sys.Date()
-      sumUsers <- paste0(vb_metrics_reactive()$num_users, " users")
+      sumUsers <- paste0(df$num_users, " users")
       statement = paste0("Total unique Users for ",input$application," as of 'SAMPLE'")
 
       valueBox(
@@ -274,8 +251,10 @@ server <- function(input, output) {
     })
 
     output$meanTimeApp = renderValueBox({
+
+      df <- vb_metrics_reactive_app()
       recent_date = Sys.Date()
-      meanTime <- paste0(vb_metrics_reactive()$mean_time, " mins")
+      meanTime <- paste0(df$mean_time, " mins")
       statement = paste0("Average time spent on ",input$application, " as of 'SAMPLE'")
 
       valueBox(
@@ -284,8 +263,10 @@ server <- function(input, output) {
     })
 
     output$sumTimeApp = renderValueBox({
+
+      df <- vb_metrics_reactive_app()
       recent_date = Sys.Date()
-      sumTime <- paste0(vb_metrics_reactive()$sum_time, " hours")
+      sumTime <- paste0(df$sum_time, " hours")
       statement = paste0("Total time spent on ", input$application," as of 'SAMPLE'")
 
       valueBox(
@@ -297,18 +278,20 @@ server <- function(input, output) {
     
     # value boxes server app wide ----
     output$sumUsers = renderValueBox({
-        recent_date = Sys.Date()
-        sumUsers <- paste0(sum_users, " users")
-        statement = "Total unique Users as of 'SAMPLE'"
+
+      recent_date = Sys.Date()
+      sumUsers <- paste0(vb_metrics_reactive()$sum_users, " users")
+      statement = "Total unique Users as of 'SAMPLE'"
         
-        valueBox(
-            paste0(sumUsers), sub("SAMPLE",recent_date,statement), icon = icon("fas fa-users", verify_fa = FALSE),
-            color = "green")
+      valueBox(
+        paste0(sumUsers), sub("SAMPLE",recent_date,statement), icon = icon("fas fa-users", verify_fa = FALSE), color = "green"
+        )
     }) 
     
     output$meanTime = renderValueBox({
+
         recent_date = Sys.Date()
-        meanTime <- paste0(mean_time, " mins")
+        meanTime <- paste0(vb_metrics_reactive()$mean_time, " mins")
         statement = "Average time on Apps as of 'SAMPLE'"
         
         valueBox(
@@ -317,8 +300,9 @@ server <- function(input, output) {
     }) 
     
     output$sumTime = renderValueBox({
+
         recent_date = Sys.Date()
-        sumTime <- paste0(sum_time, " hours")
+        sumTime <- paste0(vb_metrics_reactive()$sum_time, " hours")
         statement = "Total time on Apps as of 'SAMPLE'"
         
         valueBox(
@@ -332,7 +316,7 @@ server <- function(input, output) {
     ## visits_c ----
     output$visits_c <- renderPlotly({
         
-        plot_ly(current_usage_agg_f, 
+        plot_ly(datasets$current_usage_agg_f, 
                 x = ~year_month
                 ,y = ~num_visits
                 ,type = 'bar'
@@ -353,7 +337,7 @@ server <- function(input, output) {
     # users_c----
     output$users_c <- renderPlotly({
         
-        plot_ly(current_usage_agg, 
+        plot_ly(datasets$current_usage_agg, 
                 x = ~year_month
                 ,y = ~num_users
                 ,type = 'bar'
@@ -375,7 +359,7 @@ server <- function(input, output) {
     # sessions avg time ----
     output$sessions_avg_time_c <- renderPlotly({
   
-  plot_ly(current_usage_agg, 
+  plot_ly(datasets$current_usage_agg, 
         x = ~year_month
         ,y = ~mean_sess_time
         ,type = 'bar'
@@ -396,7 +380,7 @@ server <- function(input, output) {
     
     output$sessions_tot_time_c <- renderPlotly({
         
-        plot_ly(current_usage_agg, 
+        plot_ly(datasets$current_usage_agg, 
                 x = ~year_month
                 ,y = ~sum_sess_time
                 ,type = 'bar'
@@ -416,7 +400,7 @@ server <- function(input, output) {
     })
     
     output$visits_perc <- renderPlotly({
-      plot_ly(current_usage_agg_f, 
+      plot_ly(datasets$current_usage_agg_f, 
               x = ~year_month
               ,y = ~perc_num_visits
               ,type = 'bar'
@@ -436,7 +420,7 @@ server <- function(input, output) {
     
     output$sessions_tot_time_perc <- renderPlotly({
       
-      plot_ly(current_usage_agg_f, 
+      plot_ly(datasets$current_usage_agg_f, 
               x = ~year_month
               ,y = ~perc_sess_time
               ,type = 'bar'
@@ -463,7 +447,7 @@ server <- function(input, output) {
       },
       content = function(con) {
         write.csv(
-          current_usage
+          datasets$current_usage
             , con)
       }
     )
@@ -474,28 +458,29 @@ server <- function(input, output) {
       },
       content = function(con) {
         write.csv(
-          current_usage_agg_f
+          datasets$current_usage_agg_f
           , con)
       }
     )
     
     output$current_usage_table = DT::renderDataTable({
-      DT::datatable(current_usage)
+      DT::datatable(datasets$current_usage)
     })
     
     output$current_usage_agg_table = DT::renderDataTable({
-      DT::datatable(current_usage_agg_f)
+      DT::datatable(datasets$current_usage_agg_f)
     })
     
     # refresh data ----
     observeEvent(input$refresh, {
       source("data.R")
+      datasets$current_usage = current_usage
+      datasets$current_usage_agg = current_usage_agg
+      datasets$current_usage_tot = current_usage_tot
+      datasets$current_usage_agg_f = current_usage_agg_f
+      datasets$vb_metrics_app = vb_metrics_app
+      datasets$vb_metrics = vb_metrics
     })
-    
-
-    
-    
-    
     
 }
 

@@ -116,14 +116,27 @@ current_usage_agg_f[
 setorder(current_usage_agg, app, year_month)
 
 # value box stats app 
-vb_metrics <- current_usage[,
+vb_metrics_app <- current_usage[,
                     .(num_users= uniqueN(user_guid),
                       mean_time = round(mean(sess_time_adj, na.rm = T),1),
                       sum_time_hr = round(sum(sess_time_adj, na.rm = T)/60,1)
                         )
                     ,.(app = title)]
-setDT(vb_metrics)
+setDT(vb_metrics_app)
 
+# server wide value boxes
+sum_users <- length(unique(current_usage$user_guid))
+mean_time <- round(mean(current_usage$sess_time_adj, na.rm = T),1)
+sum_time <- round(sum(current_usage$sess_time_adj, na.rm = T),1)
+
+vb_metrics <- data.frame(sum_users, mean_time, sum_time)
+
+current_usage <-  as.data.frame(current_usage)
+current_usage_agg <- as.data.frame(current_usage_agg)
+current_usage_tot <-  as.data.frame(current_usage_tot)
+current_usage_agg_f <-  as.data.frame(current_usage_agg_f)
+vb_metrics_app <- as.data.frame(vb_metrics_app)
+vb_metrics <- as.data.frame(vb_metrics)
 
 print("data fetch complete!")
 
