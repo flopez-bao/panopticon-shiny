@@ -127,9 +127,9 @@ setDT(vb_metrics_app)
 # server wide value boxes
 sum_users <- length(unique(current_usage$user_guid))
 mean_time <- round(mean(current_usage$sess_time_adj, na.rm = T),1)
-sum_time <- round(sum(current_usage$sess_time_adj, na.rm = T),1)
+sum_time_hr <- round(sum(current_usage$sess_time_adj, na.rm = T)/60,1)
 
-vb_metrics <- data.frame(sum_users, mean_time, sum_time)
+vb_metrics <- data.frame(sum_users, mean_time, sum_time_hr)
 
 current_usage <-  as.data.frame(current_usage)
 current_usage_agg <- as.data.frame(current_usage_agg)
