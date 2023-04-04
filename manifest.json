@@ -218,6 +218,62 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:03:33 UTC; unix"
       }
     },
+    "bit": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "bit",
+        "Type": "Package",
+        "Title": "Classes and Methods for Fast Memory-Efficient Boolean Selections",
+        "Version": "4.0.5",
+        "Date": "2022-11-13",
+        "Author": "Jens Oehlschlägel [aut, cre], Brian Ripley [ctb]",
+        "Maintainer": "Jens Oehlschlägel <Jens.Oehlschlaegel@truecluster.com>",
+        "Depends": "R (>= 2.9.2)",
+        "Suggests": "testthat (>= 0.11.0), roxygen2, knitr, rmarkdown,\nmicrobenchmark, bit64 (>= 4.0.0), ff (>= 4.0.0)",
+        "Description": "Provided are classes for boolean and skewed boolean vectors,\n    fast boolean methods, fast unique and non-unique integer sorting,\n    fast set operations on sorted and unsorted sets of integers, and\n    foundations for ff (range index, compression, chunked processing).",
+        "License": "GPL-2 | GPL-3",
+        "LazyLoad": "yes",
+        "ByteCompile": "yes",
+        "Encoding": "UTF-8",
+        "URL": "https://github.com/truecluster/bit",
+        "VignetteBuilder": "knitr, rmarkdown",
+        "RoxygenNote": "7.2.0",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-11-13 21:22:09 UTC; jo",
+        "Repository": "RSPM",
+        "Date/Publication": "2022-11-15 21:20:16 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-12-07 16:15:04 UTC; unix"
+      }
+    },
+    "bit64": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "bit64",
+        "Type": "Package",
+        "Title": "A S3 Class for Vectors of 64bit Integers",
+        "Version": "4.0.5",
+        "Date": "2020-08-29",
+        "Author": "Jens Oehlschlägel [aut, cre], Leonardo Silvestri [ctb]",
+        "Maintainer": "Jens Oehlschlägel <Jens.Oehlschlaegel@truecluster.com>",
+        "Depends": "R (>= 3.0.1), bit (>= 4.0.0), utils, methods, stats",
+        "Description": "\n Package 'bit64' provides serializable S3 atomic 64bit (signed) integers. \n These are useful for handling database keys and exact counting in +-2^63.\n WARNING: do not use them as replacement for 32bit integers, integer64 are not\n supported for subscripting by R-core and they have different semantics when \n combined with double, e.g. integer64 + double => integer64. \n Class integer64 can be used in vectors, matrices, arrays and data.frames. \n Methods are available for coercion from and to logicals, integers, doubles, \n characters and factors as well as many elementwise and summary functions. \n Many fast algorithmic operations such as 'match' and 'order' support inter-\n active data exploration and manipulation and optionally leverage caching.",
+        "License": "GPL-2 | GPL-3",
+        "LazyLoad": "yes",
+        "ByteCompile": "yes",
+        "URL": "https://github.com/truecluster/bit64",
+        "Encoding": "UTF-8",
+        "Repository": "CRAN",
+        "Repository/R-Forge/Project": "ff",
+        "Repository/R-Forge/Revision": "177",
+        "Repository/R-Forge/DateTimeStamp": "2018-08-17 17:45:18",
+        "Date/Publication": "2020-08-30 07:20:02 UTC",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-08-29 10:56:45 UTC; jo",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-03-01 16:54:11 UTC; unix"
+      }
+    },
     "bslib": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
@@ -354,6 +410,62 @@
         "Repository": "RSPM",
         "Date/Publication": "2022-03-09 15:40:07 UTC",
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-03-28 15:06:13 UTC; unix"
+      }
+    },
+    "config": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "config",
+        "Type": "Package",
+        "Title": "Manage Environment Specific Configuration Values",
+        "Version": "0.3.1",
+        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@rstudio.com\"),\n  person(\"Andrie\", \"de Vries\", role = \"cre\", email = \"apdevries@gmail.com\"),\n  person(\"RStudio\", role = c(\"cph\", \"fnd\")))",
+        "Imports": "yaml (>= 2.1.19)",
+        "Suggests": "testthat, knitr, rmarkdown, covr, spelling",
+        "Description": "Manage configuration values across multiple environments (e.g.\n  development, test, production). Read values using a function that determines\n  the current environment and returns the appropriate value.",
+        "License": "GPL-3",
+        "URL": "https://github.com/rstudio/config",
+        "BugReports": "https://github.com/rstudio/config/issues",
+        "RoxygenNote": "7.1.1",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-12-15 13:05:30 UTC; apdev",
+        "Author": "JJ Allaire [aut],\n  Andrie de Vries [cre],\n  RStudio [cph, fnd]",
+        "Maintainer": "Andrie de Vries <apdevries@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-12-17 11:00:06 UTC",
+        "Built": "R 4.1.1; ; 2023-04-04 13:27:57 UTC; unix"
+      }
+    },
+    "connectapi": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Type": "Package",
+        "Package": "connectapi",
+        "Title": "Utilities for Interacting with the 'Posit Connect' Server API",
+        "Version": "0.1.3.1",
+        "Authors@R": "\n    c(person(given = \"Sean\",\n             family = \"Lopp\",\n             role = c(\"aut\")),\n      person(given = \"Cole\",\n             family = \"Arendt\",\n             role = c(\"aut\", \"cre\"),\n             email = \"cole@posit.co\"),\n      person(given = \"Posit, PBC\",\n             role = c(\"cph\", \"fnd\")))",
+        "Description": "Provides a helpful 'R6' class and methods for interacting with \n    the 'Posit Connect' Server API along with some meaningful utility functions\n    for regular tasks. API documentation varies by 'Posit Connect' installation\n    and version, but the latest documentation is also hosted publicly at \n    <https://docs.posit.co/connect/api/>.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/connectapi",
+        "Imports": "config, dplyr, fs, glue, httr, lifecycle, magrittr, progress,\npurrr, R6, rlang (>= 0.4.2), tibble, uuid, vctrs (>= 0.3.0),\nyaml, bit64, jsonlite",
+        "Suggests": "crayon, flexdashboard, ggplot2, gridExtra, htmltools, knitr,\nlubridate, processx, rmarkdown, rprojroot, spelling, testthat,\nrsconnect, webshot2, covr, mockery, devtools",
+        "VignetteBuilder": "knitr",
+        "RdMacros": "lifecycle",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-02-01 00:02:36 UTC; colearendt",
+        "Author": "Sean Lopp [aut],\n  Cole Arendt [aut, cre],\n  Posit, PBC [cph, fnd]",
+        "Maintainer": "Cole Arendt <cole@posit.co>",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-02-02 12:50:02 UTC",
+        "Built": "R 4.1.1; ; 2023-04-04 13:33:30 UTC; unix"
       }
     },
     "cpp11": {
@@ -849,6 +961,36 @@
         "Repository": "CRAN",
         "Date/Publication": "2022-09-01 02:40:12 UTC",
         "Built": "R 4.1.1; ; 2022-09-06 16:36:00 UTC; unix"
+      }
+    },
+    "hms": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "hms",
+        "Title": "Pretty Time of Day",
+        "Date": "2022-08-19",
+        "Version": "1.1.2",
+        "Authors@R": "c(\n    person(\"Kirill\", \"Müller\", role = c(\"aut\", \"cre\"), email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"R Consortium\", role = \"fnd\"),\n    person(\"RStudio\", role = \"fnd\")\n    )",
+        "Description": "Implements an S3 class for storing and formatting time-of-day\n    values, based on the 'difftime' class.",
+        "Imports": "ellipsis (>= 0.3.2), lifecycle, methods, pkgconfig, rlang,\nvctrs (>= 0.3.8)",
+        "Suggests": "crayon, lubridate, pillar (>= 1.1.0), testthat (>= 3.0.0)",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "URL": "https://hms.tidyverse.org/, https://github.com/tidyverse/hms",
+        "BugReports": "https://github.com/tidyverse/hms/issues",
+        "RoxygenNote": "7.2.1",
+        "Config/testthat/edition": "3",
+        "Config/autostyle/scope": "line_breaks",
+        "Config/autostyle/strict": "false",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "NeedsCompilation": "no",
+        "Packaged": "2022-08-18 23:21:16 UTC; kirill",
+        "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>),\n  R Consortium [fnd],\n  RStudio [fnd]",
+        "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-08-19 09:30:02 UTC",
+        "Built": "R 4.1.1; ; 2022-09-21 14:24:49 UTC; unix"
       }
     },
     "htmltools": {
@@ -1447,6 +1589,55 @@
         "Built": "R 4.1.1; ; 2022-05-25 17:45:30 UTC; unix"
       }
     },
+    "prettyunits": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "prettyunits",
+        "Title": "Pretty, Human Readable Formatting of Quantities",
+        "Version": "1.1.1",
+        "Author": "Gabor Csardi",
+        "Maintainer": "Gabor Csardi <csardi.gabor@gmail.com>",
+        "Description": "Pretty, human readable formatting of quantities.\n    Time intervals: '1337000' -> '15d 11h 23m 20s'.\n    Vague time intervals: '2674000' -> 'about a month ago'.\n    Bytes: '1337' -> '1.34 kB'.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/gaborcsardi/prettyunits",
+        "BugReports": "https://github.com/gaborcsardi/prettyunits/issues",
+        "Suggests": "codetools, covr, testthat",
+        "RoxygenNote": "7.0.2",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-01-24 02:16:46 UTC; gaborcsardi",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-01-24 06:50:07 UTC",
+        "Built": "R 4.1.1; ; 2022-02-02 18:20:56 UTC; unix"
+      }
+    },
+    "progress": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "progress",
+        "Title": "Terminal Progress Bars",
+        "Version": "1.2.2",
+        "Author": "Gábor Csárdi [aut, cre], Rich FitzJohn [aut]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Description": "Configurable Progress bars, they may include percentage,\n    elapsed time, and/or the estimated completion time. They work in\n    terminals, in 'Emacs' 'ESS', 'RStudio', 'Windows' 'Rgui' and the\n    'macOS' 'R.app'. The package also provides a 'C++' 'API', that works\n    with or without 'Rcpp'.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/progress#readme",
+        "BugReports": "https://github.com/r-lib/progress/issues",
+        "Imports": "hms, prettyunits, R6, crayon",
+        "Suggests": "Rcpp, testthat, withr",
+        "RoxygenNote": "6.1.0",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2019-05-15 20:28:47 UTC; gaborcsardi",
+        "Repository": "CRAN",
+        "Date/Publication": "2019-05-16 21:30:03 UTC",
+        "Built": "R 4.1.1; ; 2022-03-01 16:53:45 UTC; unix"
+      }
+    },
     "promises": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
@@ -1851,6 +2042,28 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:23:19 UTC; unix"
       }
     },
+    "uuid": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "description": {
+        "Package": "uuid",
+        "Version": "1.1-0",
+        "Title": "Tools for Generating and Handling of UUIDs",
+        "Author": "Simon Urbanek <Simon.Urbanek@r-project.org> (R package), Theodore Ts'o <tytso@thunk.org> (libuuid)",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0)",
+        "Description": "Tools for generating and handling of UUIDs (Universally Unique Identifiers).",
+        "License": "MIT + file LICENSE",
+        "URL": "https://www.rforge.net/uuid",
+        "BugReports": "https://github.com/s-u/uuid",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-04-19 04:03:46 UTC; rforge",
+        "Repository": "RSPM",
+        "Date/Publication": "2022-04-19 06:11:27 UTC",
+        "Encoding": "UTF-8",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2023-04-04 13:27:54 UTC; unix"
+      }
+    },
     "vctrs": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
@@ -1990,13 +2203,16 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "90d9024b07d7703ef3ca7be77c26a4c0"
+      "checksum": "b4d3b434235e5b1450d74cd45ea153ab"
     },
     "app.R": {
-      "checksum": "7b30cc722f9ad52f4a2d32f28db85eb9"
+      "checksum": "42c0d82c2cfd23267196117e84424b80"
+    },
+    "data_new.R": {
+      "checksum": "6c8dfc1a525ad81d83a709ef44f72fab"
     },
     "data.R": {
-      "checksum": "9f8553a766fb1a2b05f169b76964e3f3"
+      "checksum": "d3aadd68fb291811583da803b1befba1"
     },
     "functions.R": {
       "checksum": "dc499b9cac3c4646ac6c8246937f0b51"
