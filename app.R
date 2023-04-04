@@ -6,11 +6,11 @@ library(fasttime)
 library(plotly)
 library(DT)
 
-apiKey <- Sys.getenv("API_KEY")
-connectServer <- Sys.getenv("CONNECT_SERVER")
+#apiKey <- Sys.getenv("CONNECT_API_KEY")
+#connectServer <- Sys.getenv("CONNECT_SERVER")
 
 source("functions.R")
-source("data.R")
+source("data_new.R")
 
 ui <- dashboardPage(
   skin = "purple",
