@@ -1,53 +1,37 @@
-apiKey <- Sys.getenv("CONNECT_API_KEY")
-connectServer <- Sys.getenv("CONNECT_SERVER")
+library(connectapi)
 
-print("Fetching data...")
+# connection and data grab -----------------------------------------------------------------
+# renviron variables are collected aurtomatically freom renviron
+client <- connect()
 
-# get general content
-df_gc <- getData(
-  connectServer = connectServer,
-  apiKey = apiKey,
-  endpoint = "__api__/v1/content",
-  dataframe = T
-)
-setDT(df_gc)
-df_gc <- df_gc[!grepl("test|TEST|testing|Testing|panopticon|Test|Triage|Dev|DEV|TRIAGE", title)]
+# constants - change as time goes on
+limit = 500 # api limit on returned results
+from = "2022-01-01T18:00:00Z"
 
+# get standard data
+users <- get_users(client)
+groups <- get_groups(client)
+usage_static <- get_usage_static(client)
+all_content <- get_content(client, limit = Inf) # get all content ( this is all the apps )
 
-# get usage stats
-# usage <- getData(
-#   connectServer = connectServer,
-#   apiKey = apiKey,
-#   endpoint = "__api__/v1/instrumentation/shiny/usage?asc_order=false&limit=500",
-#   dataframe = F
-# )
-# df_usage <- listToDf(usage$results)
-# setDT(df_usage)
-df_usage <- unique(df_gc$guid) %>%
+# loop through apps and extract the 500 limit max usage records for each app
+df_usage <- unique(all_content$guid) %>%
   lapply(function(guid) {
     
-    usage_list <- 
-      getData(
-        connectServer = connectServer,
-        apiKey = apiKey,
-        endpoint = paste0("__api__/v1/instrumentation/shiny/usage?content_guid=",guid,"&asc_order=false&from=2022-01-01T18:00:00Z&limit=500"),
-        dataframe = F
-      )
-    #print(length(usage_list$results))
-    
-    if(length(usage_list$results) > 0) {
-      df <- listToDf(usage_list$results)
-    }
-    
+    usage_shiny <- get_usage_shiny(client, content_guid = guid, from = from, limit = limit)
+      
   }) %>% data.table::rbindlist()
 
-# df_usage <- listToDf(usage$results)
 setDT(df_usage)
 
 
+
+# data munging --------------------------------------------------------------------
+
+# current usage merges apps data frame aka all content with usage
 current_usage <- merge(
   df_usage,
-  df_gc,
+  all_content,
   by.x = "content_guid",
   by.y = "guid"
 )
@@ -62,15 +46,16 @@ current_usage[
     ,year_month:=substr(started,1,7)]
 
 # if the time difference is greater than or equal to 30 seconds assume that
-# reconnect timeout is acting so account for 15 second reconnect timeout for ended https://docs.rstudio.com/connect/api/#get-/v1/instrumentation/shiny/usage
+# reconnect timeout is acting so account for 15 second reconnect timeout for ended 
+# see https://docs.rstudio.com/connect/api/#get-/v1/instrumentation/shiny/usage
 current_usage[sess_time > 30
               ,sess_time_adj:=sess_time - 15][is.na(sess_time_adj)
                                               ,sess_time_adj:=sess_time]
 
 
-# extract names of apps that have had less than 10 visits/sessions in the last 12 months and get rid of them 
+# extract names of apps that have had less than 10 visits/sessions 
+# in the last 12 months and get rid of them 
 current_usage[,total_12_month_sess_count:=.N,.(title)]
-
 current_usage <- current_usage[total_12_month_sess_count > 9]
 
 # agg stats
@@ -110,18 +95,18 @@ current_usage_agg_f <-
 
 # add percent columns
 current_usage_agg_f[
-    ,perc_num_visits:=round(num_visits/tot_visits * 100, 1)][
-      ,perc_sess_time:=round(sum_sess_time/tot_sess_time * 100, 1)]
+  ,perc_num_visits:=round(num_visits/tot_visits * 100, 1)][
+    ,perc_sess_time:=round(sum_sess_time/tot_sess_time * 100, 1)]
 
 setorder(current_usage_agg, app, year_month)
 
 # value box stats app 
 vb_metrics_app <- current_usage[,
-                    .(num_users= uniqueN(user_guid),
-                      mean_time = round(mean(sess_time_adj, na.rm = T),1),
-                      sum_time_hr = round(sum(sess_time_adj, na.rm = T)/60,1)
-                        )
-                    ,.(app = title)]
+                                .(num_users= uniqueN(user_guid),
+                                  mean_time = round(mean(sess_time_adj, na.rm = T),1),
+                                  sum_time_hr = round(sum(sess_time_adj, na.rm = T)/60,1)
+                                )
+                                ,.(app = title)]
 setDT(vb_metrics_app)
 
 # server wide value boxes
@@ -139,6 +124,8 @@ vb_metrics_app <- as.data.frame(vb_metrics_app)
 vb_metrics <- as.data.frame(vb_metrics)
 
 print("data fetch complete!")
+
+
 
 
 
