@@ -67,6 +67,8 @@ current_usage[sess_time > 30
               ,sess_time_adj:=sess_time - 15][is.na(sess_time_adj)
                                               ,sess_time_adj:=sess_time]
 
+# filter out any crazy times
+current_usage <- current_usage[sess_time < 500,]
 
 # extract names of apps that have had less than 10 visits/sessions in the last 12 months and get rid of them 
 current_usage[,total_12_month_sess_count:=.N,.(title)]
