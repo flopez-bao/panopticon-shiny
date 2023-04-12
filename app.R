@@ -35,7 +35,9 @@ ui <- dashboardPage(
     ),
     ## Body content
     dashboardBody(
-      
+      tags$head(tags$style(
+        HTML('.wrapper {height: auto !important; position:relative; overflow-x:hidden; overflow-y:hidden}')
+      )),
         tabItems(
             # First tab content
             tabItem(tabName = "individual_metrics",
