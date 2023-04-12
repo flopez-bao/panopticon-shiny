@@ -1,6 +1,7 @@
 ## app.R ##
 library(shiny)
 library(shinydashboard)
+library(shinydashboardPlus)
 library(data.table)
 library(fasttime)
 library(plotly)
@@ -34,6 +35,7 @@ ui <- dashboardPage(
     ),
     ## Body content
     dashboardBody(
+      
         tabItems(
             # First tab content
             tabItem(tabName = "individual_metrics",
@@ -60,7 +62,6 @@ ui <- dashboardPage(
                         box(withSpinner(plotlyOutput("users", height = 250))),
                         box(withSpinner(plotlyOutput("sessions_avg_time", height = 250))),
                         box(withSpinner(plotlyOutput("sessions_tot_time", height = 250)))
-                        
                     )
             ),
             
@@ -93,9 +94,13 @@ ui <- dashboardPage(
                         
                     )
         
-                    )
-        )
-    )
+                    ) 
+        ) #end tab items
+    ),
+  footer = dashboardFooter(
+      left = "By Fausto Lopez",
+      right = "BAO, 2023"
+    ) 
 )
 
 server <- function(input, output) {
