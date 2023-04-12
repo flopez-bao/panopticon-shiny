@@ -5,6 +5,7 @@ library(data.table)
 library(fasttime)
 library(plotly)
 library(DT)
+library(shinycssloaders)
 
 #apiKey <- Sys.getenv("CONNECT_API_KEY")
 #connectServer <- Sys.getenv("CONNECT_SERVER")
@@ -39,15 +40,15 @@ ui <- dashboardPage(
                     # server wide app wide metrics
                     h4("Server Wide Values"),
                     fluidRow(
-                      valueBoxOutput("sumUsers", width = 4),
-                      valueBoxOutput("meanTime", width = 4),
-                      valueBoxOutput("sumTime", width = 4)
+                      withSpinner(valueBoxOutput("sumUsers", width = 4)),
+                      withSpinner(valueBoxOutput("meanTime", width = 4)),
+                      withSpinner(valueBoxOutput("sumTime", width = 4))
                     ),
                     h4("App Specific Values"),
                     fluidRow(
-                      valueBoxOutput("sumUsersApp", width = 4),
-                      valueBoxOutput("meanTimeApp", width = 4),
-                      valueBoxOutput("sumTimeApp", width = 4)
+                      withSpinner(valueBoxOutput("sumUsersApp", width = 4)),
+                      withSpinner(valueBoxOutput("meanTimeApp", width = 4)),
+                      withSpinner(valueBoxOutput("sumTimeApp", width = 4))
                     ),
                     fluidRow(
                       box(uiOutput("application_choices"),width = 6),
@@ -55,10 +56,10 @@ ui <- dashboardPage(
                       actionButton("refresh", "Refresh Data")
                     ),
                     fluidRow(
-                        box(plotlyOutput("visits", height = 250)),
-                        box(plotlyOutput("users", height = 250)),
-                        box(plotlyOutput("sessions_avg_time", height = 250)),
-                        box(plotlyOutput("sessions_tot_time", height = 250))
+                        box(withSpinner(plotlyOutput("visits", height = 250))),
+                        box(withSpinner(plotlyOutput("users", height = 250))),
+                        box(withSpinner(plotlyOutput("sessions_avg_time", height = 250))),
+                        box(withSpinner(plotlyOutput("sessions_tot_time", height = 250)))
                         
                     )
             ),
@@ -473,6 +474,17 @@ server <- function(input, output) {
     
     # refresh data ----
     observeEvent(input$refresh, {
+      showModal(modalDialog(
+        div(class = "progress", 
+            div(class = "progress-bar progress-bar-striped active", 
+                role = "progressbar", 
+                style = "width: 100%")
+        ), 
+        title = "Loading Data ...", 
+        size = "s",
+        easyClose = FALSE, 
+        footer = NULL
+      ))
       source("data_new.R")
       datasets$current_usage = current_usage
       datasets$current_usage_agg = current_usage_agg
@@ -480,6 +492,7 @@ server <- function(input, output) {
       datasets$current_usage_agg_f = current_usage_agg_f
       datasets$vb_metrics_app = vb_metrics_app
       datasets$vb_metrics = vb_metrics
+      removeModal()
     })
     
 }
