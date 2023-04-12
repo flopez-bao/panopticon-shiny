@@ -1,12 +1,12 @@
 library(connectapi)
 
 # connection and data grab -----------------------------------------------------------------
-# renviron variables are collected aurtomatically freom renviron
+# renviron variables are collected automatically from renviron
 client <- connect()
 
 # constants - change as time goes on
-limit = 500 # api limit on returned results
-from = "2022-01-01T18:00:00Z"
+#limit = 500 # api limit on returned results
+#from = "2022-01-01T18:00:00Z"
 
 # get standard data
 users <- get_users(client)
@@ -18,7 +18,12 @@ all_content <- get_content(client, limit = Inf) # get all content ( this is all 
 df_usage <- unique(all_content$guid) %>%
   lapply(function(guid) {
     
-    usage_shiny <- get_usage_shiny(client, content_guid = guid, from = from, limit = limit)
+    usage_shiny <- get_usage_shiny(
+      client, 
+      content_guid = guid, 
+      #from = from, 
+      limit = Inf #limit
+      )
       
   }) %>% data.table::rbindlist()
 
