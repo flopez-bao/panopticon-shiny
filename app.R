@@ -473,7 +473,7 @@ server <- function(input, output) {
     
     # refresh data ----
     observeEvent(input$refresh, {
-      source("data.R")
+      source("data_new.R")
       datasets$current_usage = current_usage
       datasets$current_usage_agg = current_usage_agg
       datasets$current_usage_tot = current_usage_tot
