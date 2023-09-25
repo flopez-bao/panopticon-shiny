@@ -1,12 +1,12 @@
 library(connectapi)
 
 # connection and data grab -----------------------------------------------------------------
-# renviron variables are collected automatically from renviron
+# renviron variables are collected aurtomatically freom renviron
 client <- connect()
 
 # constants - change as time goes on
-#limit = 500 # api limit on returned results
-#from = "2022-01-01T18:00:00Z"
+limit = 500 # api limit on returned results
+from = "2022-01-01T18:00:00Z"
 
 # get standard data
 users <- get_users(client)
@@ -18,12 +18,7 @@ all_content <- get_content(client, limit = Inf) # get all content ( this is all 
 df_usage <- unique(all_content$guid) %>%
   lapply(function(guid) {
     
-    usage_shiny <- get_usage_shiny(
-      client, 
-      content_guid = guid, 
-      #from = from, 
-      limit = Inf #limit
-      )
+    usage_shiny <- get_usage_shiny(client, content_guid = guid, from = from, limit = limit)
       
   }) %>% data.table::rbindlist()
 
@@ -58,7 +53,7 @@ current_usage[sess_time > 30
                                               ,sess_time_adj:=sess_time]
 
 # filter out any crazy times
-current_usage <- current_usage[sess_time > 0 & sess_time < 500 ,]
+current_usage <- current_usage[sess_time < 500,]
 
 # extract names of apps that have had less than 10 visits/sessions 
 # in the last 12 months and get rid of them 
@@ -133,9 +128,85 @@ vb_metrics <- as.data.frame(vb_metrics)
 print("data fetch complete!")
 
 
+# grab event data from logs bucket ----
+
+choices <- pdaprules::s3_list_bucket_items(bucket = Sys.getenv('LOG_BUCKET'), prefix = "R/")
+
+# read three files and combine
+all_data <- 
+  lapply(choices$path_names, function(obj) {
+    print(obj)
+    aws.s3::s3read_using(readr::read_delim, "|",
+                         bucket = Sys.getenv("LOG_BUCKET"),
+                         object = obj)
+  })
+
+
+s3_all_data <- all_data %>% rbindlist()
+s3_all_data <- s3_all_data[order(uuid,ts)]
+
+# translate app names
+s3_all_data[app == Sys.getenv("YODA"), app:= "Yoda Application"]
+s3_all_data[app == Sys.getenv("NARRATIVES"), app:= "Narratives Application"]
+s3_all_data[app == Sys.getenv("MER"), app:= "Covid Mer Application"]
+s3_all_data[app == Sys.getenv("DREAMS"), app:= "Dreams Saturation Application"]
+
+# calculate sessions time
+sess_times <- s3_all_data[, 
+           .(sess_time_min = as.numeric(difftime(
+             last(ts),
+             first(ts),
+             units = "mins"
+             )
+           )
+             ),
+           .(uuid)]
+
+# create final table
+s3_all_data <- merge(
+  s3_all_data,
+  sess_times,
+  by = "uuid"
+)
+
+
+sum_logged_users <- length(unique(s3_all_data$user))
+mean_logged_time <- round(mean(s3_all_data[!duplicated(uuid),]$sess_time_min, na.rm = T),1)
+sum_logged_time_hr <- round(sum(s3_all_data[!duplicated(uuid),]$sess_time_min, na.rm = T)/60,1)
+
+vb_metrics_logged <- data.frame(sum_logged_users, mean_logged_time, sum_logged_time_hr)
+
+
+# value box stats app 
+vb_metrics_app_logged <- 
+  s3_all_data[,.(num_sessions = uniqueN(uuid),
+              mean_time = round(mean(sess_time_min, na.rm = T),1),
+              sum_time_hr = round(sum(sess_time_min, na.rm = T)/60,1),
+              num_users = uniqueN(user)
+              )
+              ,.(app)]
 
 
 
+current_usage_agg_logged <- s3_all_data[,.(num_sessions = uniqueN(uuid),
+                                          mean_sess_time = round(mean(sess_time_min, na.rm = T),1),
+                                          sum_sess_time = round(sum(sess_time_min, na.rm = T)/60,2),
+                                          num_users = uniqueN(user)
+)
+,.(year_month = substr(ts, 1, 7),
+  app
+  )][order(year_month, app)]
+
+
+
+# tabulate number of operations within session
+events_logged <- s3_all_data[event_type != "LOGOUT",
+           .(count_event_type = .N),
+           .(
+             year_month = substr(ts, 1, 7),
+             app,
+             event_type
+           )][order(year_month)]
 
 
 
