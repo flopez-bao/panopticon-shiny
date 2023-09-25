@@ -13,6 +13,10 @@
     "DT": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "DT",
         "Type": "Package",
@@ -40,6 +44,10 @@
     "MASS": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "MASS",
         "Priority": "recommended",
@@ -69,6 +77,10 @@
     "Matrix": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "Matrix",
         "Version": "1.3-4",
@@ -102,6 +114,10 @@
     "R6": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "R6",
         "Title": "Encapsulated Classes with Reference Semantics",
@@ -126,6 +142,10 @@
     "RColorBrewer": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "RColorBrewer",
         "Version": "1.1-3",
@@ -147,6 +167,10 @@
     "Rcpp": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
@@ -172,6 +196,10 @@
     "askpass": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "askpass",
         "Type": "Package",
@@ -197,9 +225,73 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:20:44 UTC; unix"
       }
     },
+    "aws.s3": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "aws.s3",
+        "Type": "Package",
+        "Title": "'AWS S3' Client Package",
+        "Version": "0.3.21",
+        "Authors@R": "c(person(\"Thomas J.\", \"Leeper\", role = \"aut\",\n                    email = \"thosjleeper@gmail.com\",\n                    comment = c(ORCID = \"0000-0003-4097-6326\")),\n             person(\"Boettiger\", \"Carl\", role = \"ctb\"),\n             person(\"Andrew\", \"Martin\", role = \"ctb\"),\n             person(\"Mark\", \"Thompson\", role = \"ctb\"),\n             person(\"Tyler\", \"Hunt\", role = \"ctb\"),\n             person(\"Steven\", \"Akins\", role = \"ctb\"),\n             person(\"Bao\", \"Nguyen\", role = \"ctb\"),\n             person(\"Thierry\", \"Onkelinx\", role = \"ctb\"),\n             person(\"Andrii\", \"Degtiarov\", role = \"ctb\"),\n             person(\"Dhruv\", \"Aggarwal\", role = \"ctb\"),\n             person(\"Alyssa\", \"Columbus\", role = \"ctb\"),\n             person(\"Simon\", \"Urbanek\", role = c(\"cre\", \"ctb\"),\n                    email = \"simon.urbanek@R-project.org\")\n\t     )",
+        "Maintainer": "Simon Urbanek <simon.urbanek@R-project.org>",
+        "Description": "A simple client package for the Amazon Web Services ('AWS') Simple\n    Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/cloudyr/aws.s3",
+        "BugReports": "https://github.com/cloudyr/aws.s3/issues",
+        "Encoding": "UTF-8",
+        "Imports": "utils, tools, curl, httr, xml2 (> 1.0.0), base64enc, digest,\naws.signature (>= 0.3.7)",
+        "Suggests": "testthat, datasets",
+        "RoxygenNote": "7.0.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-04-07 20:31:01 UTC; svnuser",
+        "Author": "Thomas J. Leeper [aut] (<https://orcid.org/0000-0003-4097-6326>),\n  Boettiger Carl [ctb],\n  Andrew Martin [ctb],\n  Mark Thompson [ctb],\n  Tyler Hunt [ctb],\n  Steven Akins [ctb],\n  Bao Nguyen [ctb],\n  Thierry Onkelinx [ctb],\n  Andrii Degtiarov [ctb],\n  Dhruv Aggarwal [ctb],\n  Alyssa Columbus [ctb],\n  Simon Urbanek [cre, ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-04-07 21:10:02 UTC",
+        "Built": "R 4.1.1; ; 2022-02-02 18:37:11 UTC; unix"
+      }
+    },
+    "aws.signature": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "aws.signature",
+        "Type": "Package",
+        "Title": "Amazon Web Services Request Signatures",
+        "Version": "0.6.0",
+        "Date": "2020-06-01",
+        "Authors@R": "c(person(\"Thomas J.\", \"Leeper\",\n                    role = c(\"aut\"),\n                    email = \"thosjleeper@gmail.com\",\n                    comment = c(ORCID = \"0000-0003-4097-6326\")),\n             person(\"Jonathan\", \"Stott\", email = \"jonathan.stott@magairports.com\", role = c(\"cre\", \"aut\")),\n             person(\"Mike\", \"Kaminsky\", email = \"kaminsky.michael@gmail.com\", role = \"ctb\")\n            )",
+        "Description": "Generates version 2 and version 4 request signatures for Amazon Web Services ('AWS') <https://aws.amazon.com/> Application Programming Interfaces ('APIs') and provides a mechanism for retrieving credentials from environment variables, 'AWS' credentials files, and 'EC2' instance metadata. For use on 'EC2' instances, users will need to install the suggested package 'aws.ec2metadata' <https://cran.r-project.org/package=aws.ec2metadata>.",
+        "License": "GPL (>= 2)",
+        "Imports": "digest, base64enc",
+        "Suggests": "testthat (>= 2.1.0), aws.ec2metadata (>= 0.1.6)",
+        "URL": "https://github.com/cloudyr/aws.signature",
+        "BugReports": "https://github.com/cloudyr/aws.signature/issues",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-06-01 09:51:14 UTC; jon_m",
+        "Author": "Thomas J. Leeper [aut] (<https://orcid.org/0000-0003-4097-6326>),\n  Jonathan Stott [cre, aut],\n  Mike Kaminsky [ctb]",
+        "Maintainer": "Jonathan Stott <jonathan.stott@magairports.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-06-01 10:10:02 UTC",
+        "Built": "R 4.1.1; ; 2022-02-02 18:37:10 UTC; unix"
+      }
+    },
     "base64enc": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "base64enc",
         "Version": "0.1-3",
@@ -221,6 +313,10 @@
     "bit": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "bit",
         "Type": "Package",
@@ -249,6 +345,10 @@
     "bit64": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "bit64",
         "Type": "Package",
@@ -277,6 +377,10 @@
     "bslib": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "bslib",
         "Title": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'",
@@ -308,6 +412,10 @@
     "cachem": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "cachem",
         "Version": "1.0.6",
@@ -333,6 +441,10 @@
     "cli": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "cli",
         "Title": "Helpers for Developing Command Line Interfaces",
@@ -358,9 +470,46 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-09-09 14:53:00 UTC; unix"
       }
     },
+    "clipr": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Type": "Package",
+        "Package": "clipr",
+        "Title": "Read and Write from the System Clipboard",
+        "Version": "0.8.0",
+        "Authors@R": "c(\n    person(\"Matthew\", \"Lincoln\", , \"matthew.d.lincoln@gmail.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4387-3384\")),\n    person(\"Louis\", \"Maddox\", role = \"ctb\"),\n    person(\"Steve\", \"Simpson\", role = \"ctb\"),\n    person(\"Jennifer\", \"Bryan\", role = \"ctb\")\n  )",
+        "Description": "Simple utility functions to read from and write to\n    the Windows, OS X, and X11 clipboards.",
+        "License": "GPL-3",
+        "URL": "https://github.com/mdlincoln/clipr,\nhttp://matthewlincoln.net/clipr/",
+        "BugReports": "https://github.com/mdlincoln/clipr/issues",
+        "Imports": "utils",
+        "Suggests": "covr, knitr, rmarkdown, rstudioapi (>= 0.5), testthat (>=\n2.0.0)",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.1.2",
+        "SystemRequirements": "xclip (https://github.com/astrand/xclip) or xsel\n(http://www.vergenet.net/~conrad/software/xsel/) for accessing\nthe X11 clipboard, or wl-clipboard\n(https://github.com/bugaevc/wl-clipboard) for systems using\nWayland.",
+        "NeedsCompilation": "no",
+        "Packaged": "2022-02-19 02:20:21 UTC; mlincoln",
+        "Author": "Matthew Lincoln [aut, cre] (<https://orcid.org/0000-0002-4387-3384>),\n  Louis Maddox [ctb],\n  Steve Simpson [ctb],\n  Jennifer Bryan [ctb]",
+        "Maintainer": "Matthew Lincoln <matthew.d.lincoln@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-02-22 00:58:45 UTC",
+        "Built": "R 4.1.1; ; 2022-03-01 16:54:02 UTC; unix"
+      }
+    },
     "colorspace": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "colorspace",
         "Version": "2.0-3",
@@ -389,6 +538,10 @@
     "commonmark": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "commonmark",
         "Type": "Package",
@@ -415,6 +568,10 @@
     "config": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "config",
         "Type": "Package",
@@ -443,6 +600,10 @@
     "connectapi": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "connectapi",
@@ -471,6 +632,10 @@
     "cpp11": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "cpp11",
         "Title": "A C++11 Interface for R's C Interface",
@@ -499,6 +664,10 @@
     "crayon": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "crayon",
         "Title": "Colored Terminal Output",
@@ -525,6 +694,10 @@
     "crosstalk": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "crosstalk",
         "Type": "Package",
@@ -551,6 +724,10 @@
     "curl": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "curl",
         "Type": "Package",
@@ -580,6 +757,10 @@
     "data.table": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "data.table",
         "Version": "1.14.2",
@@ -608,6 +789,10 @@
     "digest": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "digest",
         "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions \n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx, \n Michel Lang, Viliam Simko, Kurt Hornik, Radford Neal, Kendon Bell,\n Matthew de Queljoe, Ion Suruceanu, Bill Denney, Dirk Schumacher,\n and Winston Chang.",
@@ -633,6 +818,10 @@
     "dplyr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "dplyr",
@@ -664,6 +853,10 @@
     "ellipsis": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "ellipsis",
         "Version": "0.3.2",
@@ -690,6 +883,10 @@
     "fansi": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "fansi",
         "Title": "ANSI Control Sequence Aware String Functions",
@@ -718,6 +915,10 @@
     "farver": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "farver",
@@ -745,6 +946,10 @@
     "fastmap": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "fastmap",
         "Title": "Fast Data Structures",
@@ -770,6 +975,10 @@
     "fasttime": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "fasttime",
         "Version": "1.1-0",
@@ -789,6 +998,10 @@
     "fontawesome": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "fontawesome",
@@ -818,6 +1031,10 @@
     "fresh": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "fresh",
         "Title": "Create Custom 'Bootstrap' Themes to Use in 'Shiny'",
@@ -845,6 +1062,10 @@
     "fs": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "fs",
         "Title": "Cross-Platform File System Operations Based on 'libuv'",
@@ -876,6 +1097,10 @@
     "generics": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "generics",
         "Title": "Common S3 Generics not Provided by Base R Methods Related to\nModel Fitting",
@@ -904,6 +1129,10 @@
     "ggplot2": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "ggplot2",
         "Version": "3.3.6",
@@ -935,6 +1164,10 @@
     "glue": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
@@ -965,6 +1198,10 @@
     "gtable": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "gtable",
         "Title": "Arrange 'Grobs' in Tables",
@@ -993,6 +1230,10 @@
     "hms": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "hms",
         "Title": "Pretty Time of Day",
@@ -1023,6 +1264,10 @@
     "htmltools": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "htmltools",
         "Type": "Package",
@@ -1053,6 +1298,10 @@
     "htmlwidgets": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "htmlwidgets",
         "Type": "Package",
@@ -1081,6 +1330,10 @@
     "httpuv": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "httpuv",
         "Type": "Package",
@@ -1111,6 +1364,10 @@
     "httr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "httr",
         "Title": "Tools for Working with URLs and HTTP",
@@ -1139,6 +1396,10 @@
     "isoband": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "isoband",
         "Title": "Generate Isolines and Isobands from Regularly Spaced Elevation\nGrids",
@@ -1167,6 +1428,10 @@
     "jquerylib": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "jquerylib",
         "Title": "Obtain 'jQuery' as an HTML Dependency Object",
@@ -1191,6 +1456,10 @@
     "jsonlite": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "jsonlite",
         "Version": "1.8.0",
@@ -1217,6 +1486,10 @@
     "labeling": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "labeling",
         "Type": "Package",
@@ -1239,6 +1512,10 @@
     "later": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "later",
         "Type": "Package",
@@ -1268,6 +1545,10 @@
     "lattice": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "lattice",
         "Version": "0.20-44",
@@ -1297,6 +1578,10 @@
     "lazyeval": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "lazyeval",
         "Version": "0.2.2",
@@ -1322,35 +1607,43 @@
     "lifecycle": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "lifecycle",
         "Title": "Manage the Life Cycle of your Package Functions",
-        "Version": "1.0.2",
+        "Version": "1.0.3",
         "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
         "Description": "Manage the life cycle of your exported functions with shared\n    conventions, documentation badges, and user-friendly deprecation\n    warnings.",
         "License": "MIT + file LICENSE",
         "URL": "https://lifecycle.r-lib.org/, https://github.com/r-lib/lifecycle",
         "BugReports": "https://github.com/r-lib/lifecycle/issues",
         "Depends": "R (>= 3.4)",
-        "Imports": "glue, rlang (>= 1.0.5)",
-        "Suggests": "covr, crayon, knitr, lintr, rmarkdown, testthat (>= 3.0.1),\ntibble, tidyverse, tools, vctrs",
+        "Imports": "cli (>= 3.4.0), glue, rlang (>= 1.0.6)",
+        "Suggests": "covr, crayon, knitr, lintr, rmarkdown, testthat (>= 3.0.1),\ntibble, tidyverse, tools, vctrs, withr",
         "VignetteBuilder": "knitr",
         "Config/testthat/edition": "3",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "Encoding": "UTF-8",
         "RoxygenNote": "7.2.1",
         "NeedsCompilation": "no",
-        "Packaged": "2022-09-01 15:20:36 UTC; lionel",
+        "Packaged": "2022-10-07 08:50:55 UTC; lionel",
         "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  RStudio [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2022-09-09 11:42:54 UTC",
-        "Built": "R 4.1.1; ; 2022-09-13 14:25:18 UTC; unix"
+        "Date/Publication": "2022-10-07 09:50:02 UTC",
+        "Built": "R 4.1.1; ; 2022-12-01 18:55:03 UTC; unix"
       }
     },
     "magrittr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "magrittr",
@@ -1380,6 +1673,10 @@
     "memoise": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "memoise",
         "Title": "'Memoisation' of Functions",
@@ -1405,6 +1702,10 @@
     "mgcv": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "mgcv",
         "Version": "1.8-36",
@@ -1429,6 +1730,10 @@
     "mime": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "mime",
         "Type": "Package",
@@ -1454,6 +1759,10 @@
     "munsell": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "munsell",
         "Type": "Package",
@@ -1477,6 +1786,10 @@
     "nlme": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "nlme",
         "Version": "3.1-152",
@@ -1508,6 +1821,10 @@
     "openssl": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "openssl",
         "Type": "Package",
@@ -1533,9 +1850,48 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-05-25 13:30:27 UTC; unix"
       }
     },
+    "pdaprules": {
+      "Source": "github",
+      "Repository": null,
+      "GithubRepo": "pdaprules",
+      "GithubUsername": "pepfar-datim",
+      "GithubRef": "main",
+      "GithubSha1": "d87e829af35510a8d8d4ae8d06064756b2c31f37",
+      "description": {
+        "Package": "pdaprules",
+        "Type": "Package",
+        "Title": "What the Package Does (Title Case)",
+        "Version": "0.1.0",
+        "Author": "Who wrote it",
+        "Maintainer": "The package maintainer <yourself@somewhere.net>",
+        "Description": "More about what it does (maybe more than one line)\n    Use four spaces when indenting paragraphs within the Description.",
+        "License": "What license is it under?",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.1",
+        "Suggests": "testthat (>= 3.0.0)",
+        "Config/testthat/edition": "3",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "pdaprules",
+        "RemoteUsername": "pepfar-datim",
+        "RemoteRef": "main",
+        "RemoteSha": "d87e829af35510a8d8d4ae8d06064756b2c31f37",
+        "GithubRepo": "pdaprules",
+        "GithubUsername": "pepfar-datim",
+        "GithubRef": "main",
+        "GithubSHA1": "d87e829af35510a8d8d4ae8d06064756b2c31f37",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-08-31 16:40:43 UTC; flopez",
+        "Built": "R 4.1.1; ; 2023-08-31 16:40:43 UTC; unix"
+      }
+    },
     "pillar": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "pillar",
         "Title": "Coloured Formatting for Columns",
@@ -1568,6 +1924,10 @@
     "pkgconfig": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "pkgconfig",
         "Title": "Private Configuration for 'R' Packages",
@@ -1592,6 +1952,10 @@
     "plotly": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "plotly",
         "Title": "Create Interactive Web Graphics via 'plotly.js'",
@@ -1619,6 +1983,10 @@
     "prettyunits": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "prettyunits",
         "Title": "Pretty, Human Readable Formatting of Quantities",
@@ -1643,6 +2011,10 @@
     "progress": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "progress",
         "Title": "Terminal Progress Bars",
@@ -1668,6 +2040,10 @@
     "promises": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "promises",
         "Type": "Package",
@@ -1698,6 +2074,10 @@
     "purrr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "purrr",
         "Title": "Functional Programming Tools",
@@ -1723,9 +2103,46 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:22:39 UTC; unix"
       }
     },
+    "ragg": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Type": "Package",
+        "Package": "ragg",
+        "Title": "Graphic Devices Based on AGG",
+        "Version": "1.2.5",
+        "Authors@R": "c(\n    person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0002-5147-4711\")),\n    person(\"Maxim\", \"Shemanarev\", role = c(\"aut\", \"cph\"),\n           comment = \"Author of AGG\"),\n    person(\"Tony\", \"Juricic\", , \"tonygeek@yahoo.com\", role = c(\"ctb\", \"cph\"),\n           comment = \"Contributor to AGG\"),\n    person(\"Milan\", \"Marusinec\", , \"milan@marusinec.sk\", role = c(\"ctb\", \"cph\"),\n           comment = \"Contributor to AGG\"),\n    person(\"Spencer\", \"Garrett\", role = \"ctb\",\n           comment = \"Contributor to AGG\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
+        "Description": "Anti-Grain Geometry (AGG) is a high-quality and\n    high-performance 2D drawing library. The 'ragg' package provides a set\n    of graphic devices based on AGG to use as alternative to the raster\n    devices provided through the 'grDevices' package.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://ragg.r-lib.org, https://github.com/r-lib/ragg",
+        "BugReports": "https://github.com/r-lib/ragg/issues",
+        "Imports": "systemfonts (>= 1.0.3), textshaping (>= 0.3.0)",
+        "Suggests": "covr, graphics, grid, testthat",
+        "LinkingTo": "systemfonts, textshaping",
+        "Config/Needs/website": "ggplot2, devoid, magick, bench, tidyr, ggridges,\nhexbin, sessioninfo, pkgdown, tidyverse/tidytemplate",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.1",
+        "SystemRequirements": "C++11, freetype2, libpng, libtiff, libjpeg",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-01-12 09:36:24 UTC; thomas",
+        "Author": "Thomas Lin Pedersen [cre, aut]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  Maxim Shemanarev [aut, cph] (Author of AGG),\n  Tony Juricic [ctb, cph] (Contributor to AGG),\n  Milan Marusinec [ctb, cph] (Contributor to AGG),\n  Spencer Garrett [ctb] (Contributor to AGG),\n  RStudio [cph, fnd]",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-01-12 10:30:08 UTC",
+        "Built": "R 4.1.0; x86_64-pc-linux-gnu; 2023-01-13 12:25:01 UTC; unix"
+      }
+    },
     "rappdirs": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "rappdirs",
@@ -1751,41 +2168,84 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:04:35 UTC; unix"
       }
     },
+    "readr": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "readr",
+        "Title": "Read Rectangular Text Data",
+        "Version": "2.1.4",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Romain\", \"Francois\", role = \"ctb\"),\n    person(\"Jennifer\", \"Bryan\", , \"jenny@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-6983-2759\")),\n    person(\"Shelby\", \"Bearrows\", role = \"ctb\"),\n    person(\"Posit, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"https://github.com/mandreyel/\", role = \"cph\",\n           comment = \"mio library\"),\n    person(\"Jukka\", \"Jylänki\", role = c(\"ctb\", \"cph\"),\n           comment = \"grisu3 implementation\"),\n    person(\"Mikkel\", \"Jørgensen\", role = c(\"ctb\", \"cph\"),\n           comment = \"grisu3 implementation\")\n  )",
+        "Description": "The goal of 'readr' is to provide a fast and friendly way to\n    read rectangular data (like 'csv', 'tsv', and 'fwf').  It is designed\n    to flexibly parse many types of data found in the wild, while still\n    cleanly failing when data unexpectedly changes.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://readr.tidyverse.org, https://github.com/tidyverse/readr",
+        "BugReports": "https://github.com/tidyverse/readr/issues",
+        "Depends": "R (>= 3.5)",
+        "Imports": "cli (>= 3.2.0), clipr, crayon, hms (>= 0.4.1), lifecycle (>=\n0.2.0), methods, R6, rlang, tibble, utils, vroom (>= 1.6.0)",
+        "Suggests": "covr, curl, datasets, knitr, rmarkdown, spelling, stringi,\ntestthat (>= 3.1.2), tzdb (>= 0.1.1), waldo, withr, xml2",
+        "LinkingTo": "cpp11, tzdb (>= 0.1.1)",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse, tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "false",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-02-10 00:05:55 UTC; jenny",
+        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut],\n  Romain Francois [ctb],\n  Jennifer Bryan [aut, cre] (<https://orcid.org/0000-0002-6983-2759>),\n  Shelby Bearrows [ctb],\n  Posit, PBC [cph, fnd],\n  https://github.com/mandreyel/ [cph] (mio library),\n  Jukka Jylänki [ctb, cph] (grisu3 implementation),\n  Mikkel Jørgensen [ctb, cph] (grisu3 implementation)",
+        "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-02-10 09:20:02 UTC",
+        "Built": "R 4.1.0; x86_64-pc-linux-gnu; 2023-08-11 11:58:20 UTC; unix"
+      }
+    },
     "rlang": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "rlang",
-        "Version": "1.0.5",
+        "Version": "1.1.1",
         "Title": "Functions for Base Types and Core R and 'Tidyverse' Features",
         "Description": "A toolbox for working with base types, core R features\n  like the condition system, and core 'Tidyverse' features like tidy\n  evaluation.",
-        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", ,\"lionel@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", \"aut\"),\n    person(given = \"mikefc\",\n           email = \"mikefc@coolbutuseless.com\", \n           role = \"cph\", \n           comment = \"Hash implementation based on Mike's xxhashlite\"),\n    person(given = \"Yann\",\n           family = \"Collet\",\n           role = \"cph\", \n           comment = \"Author of the embedded xxHash library\"),\n    person(given = \"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", ,\"lionel@posit.co\", c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", ,\"hadley@posit.co\", \"aut\"),\n    person(given = \"mikefc\",\n           email = \"mikefc@coolbutuseless.com\", \n           role = \"cph\", \n           comment = \"Hash implementation based on Mike's xxhashlite\"),\n    person(given = \"Yann\",\n           family = \"Collet\",\n           role = \"cph\", \n           comment = \"Author of the embedded xxHash library\"),\n    person(given = \"Posit, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
         "License": "MIT + file LICENSE",
         "ByteCompile": "true",
         "Biarch": "true",
-        "Depends": "R (>= 3.4.0)",
+        "Depends": "R (>= 3.5.0)",
         "Imports": "utils",
         "Suggests": "cli (>= 3.1.0), covr, crayon, fs, glue, knitr, magrittr,\nmethods, pillar, rmarkdown, stats, testthat (>= 3.0.0), tibble,\nusethis, vctrs (>= 0.2.3), withr",
         "Enhances": "winch",
-        "SystemRequirements": "C++11",
         "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.1.9000",
+        "RoxygenNote": "7.2.3",
         "URL": "https://rlang.r-lib.org, https://github.com/r-lib/rlang",
         "BugReports": "https://github.com/r-lib/rlang/issues",
         "Config/testthat/edition": "3",
         "Config/Needs/website": "dplyr, tidyverse/tidytemplate",
         "NeedsCompilation": "yes",
-        "Packaged": "2022-08-30 13:17:33 UTC; lionel",
-        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  mikefc [cph] (Hash implementation based on Mike's xxhashlite),\n  Yann Collet [cph] (Author of the embedded xxHash library),\n  RStudio [cph, fnd]",
-        "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+        "Packaged": "2023-04-28 10:48:43 UTC; lionel",
+        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  mikefc [cph] (Hash implementation based on Mike's xxhashlite),\n  Yann Collet [cph] (Author of the embedded xxHash library),\n  Posit, PBC [cph, fnd]",
+        "Maintainer": "Lionel Henry <lionel@posit.co>",
         "Repository": "RSPM",
-        "Date/Publication": "2022-08-31 13:00:02 UTC",
-        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-09-13 14:25:04 UTC; unix"
+        "Date/Publication": "2023-04-28 22:30:03 UTC",
+        "Built": "R 4.1.0; x86_64-pc-linux-gnu; 2023-05-01 11:04:16 UTC; unix"
       }
     },
     "rstudioapi": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "rstudioapi",
         "Title": "Safely Access the RStudio API",
@@ -1811,6 +2271,10 @@
     "sass": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "sass",
@@ -1840,6 +2304,10 @@
     "scales": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "scales",
         "Title": "Scale Functions for Visualization",
@@ -1869,6 +2337,10 @@
     "shiny": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "shiny",
         "Type": "Package",
@@ -1900,6 +2372,10 @@
     "shinycssloaders": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "shinycssloaders",
         "Type": "Package",
@@ -1927,6 +2403,10 @@
     "shinydashboard": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "shinydashboard",
         "Title": "Create Dashboards with 'Shiny'",
@@ -1952,6 +2432,10 @@
     "shinydashboardPlus": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "shinydashboardPlus",
         "Type": "Package",
@@ -1980,6 +2464,10 @@
     "sourcetools": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "sourcetools",
         "Type": "Package",
@@ -2005,6 +2493,10 @@
     "sys": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "sys",
         "Type": "Package",
@@ -2029,9 +2521,79 @@
         "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:20:42 UTC; unix"
       }
     },
+    "systemfonts": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "systemfonts",
+        "Type": "Package",
+        "Title": "System Native Font Finding",
+        "Version": "1.0.4",
+        "Authors@R": "\n    c(person(given = \"Thomas Lin\",\n             family = \"Pedersen\",\n             role = c(\"aut\", \"cre\"),\n             email = \"thomas.pedersen@rstudio.com\",\n             comment = c(ORCID = \"0000-0002-5147-4711\")),\n      person(given = \"Jeroen\", \n             family = \"Ooms\", \n             role = \"aut\",\n             email = \"jeroen@berkeley.edu\",\n             comment = c(ORCID = \"0000-0002-4035-0289\")),\n      person(given = \"Devon\",\n             family = \"Govett\",\n             role = \"aut\",\n             comment = \"Author of font-manager\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
+        "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@rstudio.com>",
+        "Description": "Provides system native access to the font catalogue. As font\n    handling varies between systems it is difficult to correctly locate \n    installed fonts across different operating systems. The 'systemfonts' \n    package provides bindings to the native libraries on Windows, macOS and \n    Linux for finding font files that can then be used further by e.g. graphic\n    devices. The main use is intended to be from compiled code but 'systemfonts'\n    also provides access from R.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.2",
+        "Depends": "R (>= 3.2.0)",
+        "SystemRequirements": "C++11, fontconfig, freetype2",
+        "Suggests": "testthat (>= 2.1.0), covr, knitr, rmarkdown, tools",
+        "VignetteBuilder": "knitr",
+        "URL": "https://github.com/r-lib/systemfonts",
+        "BugReports": "https://github.com/r-lib/systemfonts/issues",
+        "LinkingTo": "cpp11 (>= 0.2.1)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-02-11 12:33:22 UTC; thomas",
+        "Author": "Thomas Lin Pedersen [aut, cre]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  Jeroen Ooms [aut] (<https://orcid.org/0000-0002-4035-0289>),\n  Devon Govett [aut] (Author of font-manager),\n  RStudio [cph]",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-02-11 12:50:02 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-09-22 15:13:18 UTC; unix"
+      }
+    },
+    "textshaping": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "textshaping",
+        "Title": "Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text\nShaping",
+        "Version": "0.3.6",
+        "Authors@R": "c(\n    person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@rstudio.com\", c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
+        "Description": "Provides access to the text shaping functionality in the 'HarfBuzz'\n    library and the bidirectional algorithm in the 'Fribidi' library. \n    'textshaping' is a low-level utility package mainly for graphic devices that \n    expands upon the font tool-set provided by the 'systemfonts' package.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.1",
+        "Depends": "R (>= 3.2.0)",
+        "Imports": "systemfonts (>= 1.0.0)",
+        "LinkingTo": "cpp11 (>= 0.2.1), systemfonts (>= 1.0.0)",
+        "SystemRequirements": "C++11, freetype2, harfbuzz, fribidi",
+        "URL": "https://github.com/r-lib/textshaping",
+        "BugReports": "https://github.com/r-lib/textshaping/issues",
+        "Suggests": "covr, knitr, rmarkdown",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2021-10-13 11:45:03 UTC; thomas",
+        "Author": "Thomas Lin Pedersen [cre, aut]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  RStudio [cph]",
+        "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2021-10-13 12:00:02 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-10-05 14:25:02 UTC; unix"
+      }
+    },
     "tibble": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "tibble",
         "Title": "Simple Data Frames",
@@ -2065,6 +2627,10 @@
     "tidyr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "tidyr",
         "Title": "Tidy Messy Data",
@@ -2097,6 +2663,10 @@
     "tidyselect": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "tidyselect",
         "Title": "Select from a Set of Strings",
@@ -2123,9 +2693,47 @@
         "Built": "R 4.1.1; ; 2022-03-01 16:54:31 UTC; unix"
       }
     },
+    "tzdb": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "tzdb",
+        "Title": "Time Zone Database Information",
+        "Version": "0.3.0",
+        "Authors@R": "c(\n    person(\"Davis\", \"Vaughan\", , \"davis@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Howard\", \"Hinnant\", role = \"cph\",\n           comment = \"Author of the included date library\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Provides an up-to-date copy of the Internet Assigned Numbers\n    Authority (IANA) Time Zone Database. It is updated periodically to\n    reflect changes made by political bodies to time zone boundaries, UTC\n    offsets, and daylight saving time rules. Additionally, this package\n    provides a C++ interface for working with the 'date' library. 'date'\n    provides comprehensive support for working with dates and date-times,\n    which this package exposes to make it easier for other R packages to\n    utilize. Headers are provided for calendar specific calculations,\n    along with a limited interface for time zone manipulations.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://tzdb.r-lib.org, https://github.com/r-lib/tzdb",
+        "BugReports": "https://github.com/r-lib/tzdb/issues",
+        "Depends": "R (>= 3.4.0)",
+        "Suggests": "covr, testthat (>= 3.0.0)",
+        "LinkingTo": "cpp11 (>= 0.4.2)",
+        "Biarch": "yes",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.2",
+        "SystemRequirements": "C++11",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-03-28 13:59:28 UTC; davis",
+        "Author": "Davis Vaughan [aut, cre],\n  Howard Hinnant [cph] (Author of the included date library),\n  RStudio [cph, fnd]",
+        "Maintainer": "Davis Vaughan <davis@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-03-28 15:00:02 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-05-25 13:34:03 UTC; unix"
+      }
+    },
     "utf8": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "utf8",
         "Title": "Unicode Text Processing",
@@ -2152,6 +2760,10 @@
     "uuid": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "uuid",
         "Version": "1.1-0",
@@ -2174,6 +2786,10 @@
     "vctrs": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "vctrs",
         "Title": "Vector Helpers",
@@ -2205,6 +2821,10 @@
     "viridisLite": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "viridisLite",
         "Type": "Package",
@@ -2228,9 +2848,51 @@
         "Built": "R 4.1.1; ; 2022-09-06 16:35:35 UTC; unix"
       }
     },
+    "vroom": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "vroom",
+        "Title": "Read and Write Rectangular Text Data Quickly",
+        "Version": "1.6.0",
+        "Authors@R": "c(\n    person(\"Jim\", \"Hester\", , \"jim.hester@rstudio.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-2739-7082\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Jennifer\", \"Bryan\", , \"jenny@rstudio.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-6983-2759\")),\n    person(\"Shelby\", \"Bearrows\", role = \"ctb\"),\n    person(\"https://github.com/mandreyel/\", role = \"cph\",\n           comment = \"mio library\"),\n    person(\"Jukka\", \"Jylänki\", role = \"cph\",\n           comment = \"grisu3 implementation\"),\n    person(\"Mikkel\", \"Jørgensen\", role = \"cph\",\n           comment = \"grisu3 implementation\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "The goal of 'vroom' is to read and write data (like 'csv',\n    'tsv' and 'fwf') quickly. When reading it uses a quick initial\n    indexing step, then reads the values lazily , so only the data you\n    actually use needs to be read.  The writer formats the data in\n    parallel and writes to disk asynchronously from formatting.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://vroom.r-lib.org, https://github.com/tidyverse/vroom",
+        "BugReports": "https://github.com/tidyverse/vroom/issues",
+        "Depends": "R (>= 3.4)",
+        "Imports": "bit64, cli (>= 3.2.0), crayon, glue, hms, lifecycle, methods,\nrlang (>= 0.4.2), stats, tibble (>= 2.0.0), tidyselect, tzdb\n(>= 0.1.1), vctrs (>= 0.2.0), withr",
+        "Suggests": "archive, bench (>= 1.1.0), covr, curl, dplyr, forcats, fs,\nggplot2, knitr, patchwork, prettyunits, purrr, rmarkdown,\nrstudioapi, scales, spelling, testthat (>= 2.1.0), tidyr,\nutils, waldo, xml2",
+        "LinkingTo": "cpp11 (>= 0.2.0), progress (>= 1.2.1), tzdb (>= 0.1.1)",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "nycflights13, tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "false",
+        "Copyright": "file COPYRIGHTS",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.2.1",
+        "SystemRequirements": "C++11",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-09-30 06:19:07 UTC; jenny",
+        "Author": "Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>),\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Jennifer Bryan [aut, cre] (<https://orcid.org/0000-0002-6983-2759>),\n  Shelby Bearrows [ctb],\n  https://github.com/mandreyel/ [cph] (mio library),\n  Jukka Jylänki [cph] (grisu3 implementation),\n  Mikkel Jørgensen [cph] (grisu3 implementation),\n  RStudio [cph, fnd]",
+        "Maintainer": "Jennifer Bryan <jenny@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2022-09-30 14:50:02 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-12-07 16:15:10 UTC; unix"
+      }
+    },
     "waiter": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "waiter",
         "Title": "Loading Screen for 'Shiny'",
@@ -2258,6 +2920,10 @@
     "withr": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "withr",
         "Title": "Run Code 'With' Temporarily Modified Global State",
@@ -2285,9 +2951,46 @@
         "Built": "R 4.1.1; ; 2022-03-28 15:04:17 UTC; unix"
       }
     },
+    "xml2": {
+      "Source": "CRAN",
+      "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "xml2",
+        "Title": "Parse XML",
+        "Version": "1.3.3",
+        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Jim\",\n             family = \"Hester\",\n             role = \"aut\"),\n      person(given = \"Jeroen\",\n             family = \"Ooms\",\n             role = \"aut\"),\n      person(given = \"RStudio\",\n             role = \"cph\"),\n      person(given = \"R Foundation\",\n             role = \"ctb\",\n             comment = \"Copy of R-project homepage cached as example\"))",
+        "Description": "Work with XML files using a simple, consistent\n    interface. Built on top of the 'libxml2' C library.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://xml2.r-lib.org/, https://github.com/r-lib/xml2",
+        "BugReports": "https://github.com/r-lib/xml2/issues",
+        "Depends": "R (>= 3.1.0)",
+        "Imports": "methods",
+        "Suggests": "covr, curl, httr, knitr, magrittr, mockery, rmarkdown,\ntestthat (>= 2.1.0)",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
+        "Collate": "'S4.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R'\n'classes.R' 'init.R' 'paths.R' 'utils.R' 'xml_attr.R'\n'xml_children.R' 'xml_find.R' 'xml_modify.R' 'xml_name.R'\n'xml_namespaces.R' 'xml_path.R' 'xml_schema.R'\n'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R'\n'xml_url.R' 'xml_write.R' 'zzz.R'",
+        "NeedsCompilation": "yes",
+        "Packaged": "2021-11-29 17:55:43 UTC; jhester",
+        "Author": "Hadley Wickham [aut, cre],\n  Jim Hester [aut],\n  Jeroen Ooms [aut],\n  RStudio [cph],\n  R Foundation [ctb] (Copy of R-project homepage cached as example)",
+        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2021-11-30 14:40:02 UTC",
+        "Built": "R 4.1.1; x86_64-pc-linux-gnu; 2022-02-02 18:22:43 UTC; unix"
+      }
+    },
     "xtable": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "xtable",
         "Version": "1.8-4",
@@ -2313,6 +3016,10 @@
     "yaml": {
       "Source": "CRAN",
       "Repository": "https://rstudio-package.testing.ap.datim.org/prod/__linux__/focal/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "yaml",
         "Type": "Package",
@@ -2336,14 +3043,17 @@
     }
   },
   "files": {
+    ".RData": {
+      "checksum": "40bc974a5b907c3db9716158f0859911"
+    },
     ".Rprofile": {
-      "checksum": "792f9d81f598dbcd74c3a4d5c348b65b"
+      "checksum": "0f38ecae8ce805c9c68be203f87c9e2a"
     },
     "app.R": {
-      "checksum": "e5d46ad95941ee775db1fcd1603423e3"
+      "checksum": "b5ddc055e111a4c339fc844d246263d2"
     },
     "data_new.R": {
-      "checksum": "598ba7b866bf15fa7c38e9da2c099f16"
+      "checksum": "50ecee332a021cd3dd39fd77d802fcd4"
     },
     "data.R": {
       "checksum": "53cbc78644dacaf4167e237fc6979749"
