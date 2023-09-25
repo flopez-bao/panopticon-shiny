@@ -74,7 +74,7 @@ ui <- dashboardPage(
             
             # tab on logged data
             tabItem(tabName = "logged_data",
-                    h4("The following page shows metrics based on logged events written to S3 for all usersl; this captures ALL users as well as event based activity."),
+                    h4("The following page shows metrics based on logged events written to S3 for all users; this captures ALL users as well as event based activity."),
                     # server wide app wide metrics
                     h4("Server Wide Values"),
                     fluidRow(
