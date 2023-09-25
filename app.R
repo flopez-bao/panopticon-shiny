@@ -723,7 +723,7 @@ server <- function(input, output) {
       },
       content = function(con) {
         write.csv(
-          datasets$all_data_
+          datasets$s3_all_data
           , con)
       }
     )
