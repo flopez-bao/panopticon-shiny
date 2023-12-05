@@ -91,7 +91,11 @@ ui <- dashboardPage(
                           tabPanel("Aggregated Metrics", value ='current_usage_agg'
                                    , downloadButton('downloadData2', 'Download Data Set')
                                    , DT::dataTableOutput('current_usage_agg_table')
-                                   )
+                                   ),
+                          tabPanel("Users List", value ='users'
+                                   , downloadButton('downloadData3', 'Download Data Set')
+                                   , DT::dataTableOutput('users_table')
+                          )
                         )
                         
                     )
@@ -140,7 +144,8 @@ server <- function(input, output) {
       current_usage_tot = current_usage_tot,
       current_usage_agg_f = current_usage_agg_f,
       vb_metrics_app = vb_metrics_app,
-      vb_metrics = vb_metrics
+      vb_metrics = vb_metrics,
+      users = users
     )
 
     # data frames
@@ -471,12 +476,28 @@ server <- function(input, output) {
       }
     )
     
+    output$downloadData3 = downloadHandler(
+      filename = function() {
+        paste('connect_users_list_', Sys.Date(), '.csv', sep='')
+      },
+      content = function(con) {
+        write.csv(
+          datasets$users
+          , con)
+      }
+    )
+    
+    # data set views ----
     output$current_usage_table = DT::renderDataTable({
       DT::datatable(datasets$current_usage)
     })
     
     output$current_usage_agg_table = DT::renderDataTable({
       DT::datatable(datasets$current_usage_agg_f)
+    })
+    
+    output$users_table = DT::renderDataTable({
+      DT::datatable(datasets$users)
     })
     
     # refresh data ----
