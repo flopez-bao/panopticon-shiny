@@ -9,7 +9,7 @@ client <- connect()
 #from = "2022-01-01T18:00:00Z"
 
 # get standard data
-users <- get_users(client)
+users <- get_users(client, limit = Inf) %>% select(-username)
 groups <- get_groups(client)
 usage_static <- get_usage_static(client)
 all_content <- get_content(client, limit = Inf) # get all content ( this is all the apps )
@@ -129,6 +129,7 @@ current_usage_tot <-  as.data.frame(current_usage_tot)
 current_usage_agg_f <-  as.data.frame(current_usage_agg_f)
 vb_metrics_app <- as.data.frame(vb_metrics_app)
 vb_metrics <- as.data.frame(vb_metrics)
+users_r <- users
 
 print("data fetch complete!")
 
